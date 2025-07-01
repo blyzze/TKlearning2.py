@@ -8,7 +8,6 @@ window = Tk()
 window.title("Secret Notes")
 window.config(padx=20, pady=20)
 
-# --- Fonksiyonlar ---
 def write_file(title, encrypted_text):
     with open(f"{title}.txt", "wb") as file:
         file.write(encrypted_text)
@@ -94,13 +93,6 @@ def decrypt_note():
         messagebox.showerror("Hata", f"Şifre çözme başarısız!\n{str(e)}")
 
 
-# --- Arayüz Elemanları ---
-
-# Logo (isteğe bağlı)
-# canvas = Canvas(height=100, width=100)
-# logo = PhotoImage(file="top_secret.png")
-# canvas.create_image(50, 50, image=logo)
-# canvas.pack()
 
 Label(text="Enter your title").pack()
 title_entry = Entry(width=30)
